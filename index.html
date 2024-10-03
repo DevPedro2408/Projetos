@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dê um nome</title>
+</head>
+<body>
+    <header>
+        <div class="centralizando">
+            <img src="assets/hamb-1.png" alt="">
+            <h1>Dê um nome</h1>
+            <span class="endereco"><a target="_blank" rel="next" href="https://www.google.com/maps/place/R.+Maria+F%C3%A1tima+Figueiredo.,+27+-+Novo+Cohatrac,+S%C3%A3o+Jos%C3%A9+de+Ribamar+-+MA,+65068-395/@-2.5165519,-44.2037737,19z/data=!3m1!4b1!4m6!3m5!1s0x7f6917a5124da8b:0x82c15704288a9554!8m2!3d-2.5165532!4d-44.2031286!16s%2Fg%2F11ggr6l3ds?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D">Rua maria de fátima figueiredo, n27</a></span>
+
+            <div class="funcio" id="horario">
+                <span>Seg à Dom - 18:00 as 23:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!--INICIO MENU-->
+    <main id="menu-principal">
+        <h2 class="titulo-1-menu">Conheça nosso menu</h2>
+        <div class="menu">
+
+            <!--INCIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-1.png" alt="Hambúrguer classico BBQ">
+                <div class="nome-descri-botao">
+                    <p class="produto">Clássico BBQ Bacon</p>
+                    <p class="descricao">Hambúrguer com cheddar, bacon crocante, cebolas caramelizadas e molho barbecue no pão brioche.</p>
+                    <div class="preco-botao">
+                        <p>R$ 18.90</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Clássico BBQ Bacon" data-preco="18.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+
+
+            <!--INICIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-2.png" alt="">
+                <div class="nome-descri-botao">
+                    <p class="produto">Cheddar Deluxe</p>
+                    <p class="descricao">Carne bovina com muito queijo cheddar, cebolas crocantes e molho especial no pão de brioche.</p>
+                    <div class="preco-botao">
+                        <p>R$ 29.90</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Cheddar Deluxe" data-preco="29.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+        </div>
+
+        <!--Parte 2-->
+
+        <div class="menu">
+
+            <!--INCIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-8.png" alt="Hambúrguer classico BBQ">
+                <div class="nome-descri-botao">
+                    <p class="produto">Vegetariano Grilled Veggie</p>
+                    <p class="descricao">Hambúrguer de grão-de-bico e quinoa, com abacate, alface, tomate e molho de iogurte.</p>
+                    <div class="preco-botao">
+                        <p>R$ 17.90</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Vegetariano Grilled Veggie" data-preco="17.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+
+
+            <!--INICIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-4.png" alt="">
+                <div class="nome-descri-botao">
+                    <p class="produto">Frango Crocante</p>
+                    <p class="descricao">Frango empanado, alface, tomate e maionese de ervas no pão de batata.</p>
+                    <div class="preco-botao">
+                        <p>R$ 16.90</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Frango Crocante" data-preco="16.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+        </div>
+
+        <!--Parte 3-->
+
+        <div class="menu">
+
+            <!--INCIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-6.png" alt="Hambúrguer classico BBQ">
+                <div class="nome-descri-botao">
+                    <p class="produto">Blue Cheese & Bacon</p>
+                    <p class="descricao">Carne com gorgonzola, bacon, rúcula e cebolas caramelizadas no pão brioche.</p>
+                    <div class="preco-botao">
+                        <p>R$ 20.90</p>
+                        <button
+                        id="addcarrinho" 
+                        class="add-to-cart-btn" data-nome="Blue Cheese & Bacon" data-preco="20.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+
+
+            <!--INICIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-3.png" alt="">
+                <div class="nome-descri-botao">
+                    <p class="produto">Double Smash</p>
+                    <p class="descricao">Dois hambúrgueres finos com queijo americano, picles, ketchup e mostarda no pão de batata.</p>
+                    <div class="preco-botao">
+                        <p>R$ 24.90</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Double Smash" data-preco="24.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+        </div>
+
+        <!--Parte 4-->
+
+        <div class="menu">
+
+            <!--INCIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-5.png" alt="Hambúrguer classico BBQ">
+                <div class="nome-descri-botao">
+                    <p class="produto">Mexican Spicy</p>
+                    <p class="descricao">Hambúrguer com pepper jack, guacamole, jalapeños e maionese picante.</p>
+                    <div class="preco-botao">
+                        <p>R$ 20.00</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Mexican Spicy" data-preco="20.00">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+
+
+            <!--INICIO PRODUTO-->
+            <div class="principal">
+                <img class="img-burguer" src="assets/hamb-7.png" alt="">
+                <div class="nome-descri-botao">
+                    <p class="produto">Pulled Pork Burger</p>
+                    <p class="descricao">Carne bovina com porco desfiado, cheddar e molho barbecue.</p>
+                    <div class="preco-botao">
+                        <p>R$ 17.90</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Pulled Pork Burger" data-preco="17.90">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO-->
+        </div>
+
+        <div>
+            <h2 class="bebidas">Bebidas</h2>
+        </div>
+
+        <!--Inicio bebida-->
+        <div class="menu">
+            <div class="principal">
+                <img class="img-burguer" src="assets/refri-1.png" alt="">
+                
+                <div class="nome-descri-botao">
+                    <p class="produto">Coca lata</p>
+                    <div class="preco-botao">
+                        <p>R$ 6</p>
+                        <button 
+                        class="add-to-cart-btn" data-nome="Coca lata" data-preco="6">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim bebidas-->
+
+            <!--Inicio bebida-->
+            <div class="principal" id="guarana">
+                <img class="img-burguer" src="assets/refri-2.png" alt="">
+
+                <div class="nome-descri-botao">
+                    <p class="produto">Guaraná lata</p>
+                    <div class="preco-botao">
+                        <p class="preco">R$ 6</p>
+                        <button class="add-to-cart-btn" data-nome = "Guaraná lata" data-preco = "6">
+                            <i class="fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim bebidas-->
+        </div>
+    </main>
+    <!--FIM MENU-->
+
+    <!--Modal cart-->
+    <div class="modal" id="cart-modal" hidden>
+
+        <div class="area-carrinho">
+            <h2>Meu carrinho</h2>
+
+            <div id="cart-itens"></div>
+
+            <p style="font-weight: bold;">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="area-carrinho-p">Endereço de entrega:</p>
+
+            <input type="text" name="" id="endereco" required
+            placeholder="Digite seu endereço completo..." class="input-text">
+
+            <p id="endereco-warn" class="erro-endereco" hidden >Digite seu endereço completo!</p>
+
+            <div class="fechar-finalizar">
+                <button id="close-modal-btn" class="fechar">Fechar</button>
+                
+                <button id="checkout-btn" class="finalizar">Finalizar Pedido</button>
+            </div>
+        
+        </div>
+
+    </div>
+    <!--Fim modal cart-->
+
+    <footer>
+        <button class="botao-footer" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            <p>Veja seu carrinho</p>
+            <i class="fa fa-cart-plus"></i>
+        </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
